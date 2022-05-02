@@ -147,7 +147,7 @@ def main():
             y_label_dc =  getOneHotSegmentation(y_label_dc)
             optimizer.zero_grad() 
             predict = net(imgs_cuda)
-            loss = criterion(predict, y_label_dc)
+            loss = criterion(F.softmax(predict,dim=1), y_label_dc)
             loss.backward()
             run_loss[epoch] += loss.item()
             optimizer.step()
