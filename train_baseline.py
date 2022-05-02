@@ -9,8 +9,8 @@ import os
 import nibabel as nib
 import argparse
 
-from utils_model import count_parameters, diceloss, CE_loss, DC_CE_loss, dice_score, getOneHotSegmentation, avg_hd, weights_init, augmentAffine
-from models_3d import unet3d, attenunet3d, unetplus3d
+from utils import count_parameters, diceloss, CE_loss, DC_CE_loss, dice_score, getOneHotSegmentation, avg_hd, weights_init, augmentAffine
+from models.baseline_models import unet3d, attenunet3d, unetplus3d
 
 
 def main():
@@ -92,7 +92,7 @@ def main():
         criterion = DC_CE_loss() ## cross entropy + dice loss
 
 
-    #### loss function ####
+    #### optimizer ####
     if args.optimizer == "adam":
         optimizer = optim.Adam(net.parameters(), lr=args.lr)
     if args.optimizer == "sgd":
