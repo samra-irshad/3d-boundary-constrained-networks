@@ -8,6 +8,7 @@ This repository contains pytorch implementation corresponding to single-task (ba
 1. 3D UNet
 2. 3D UNet++
 3. 3D Attention-UNet
+
 Implementation for baseline models is in script [here](https://github.com/samra-irshad/3d-multitask-unet/blob/main/model/baseline_models.py)
 
 ## 3D boundary-constrained models:
@@ -17,6 +18,7 @@ Implementation for baseline models is in script [here](https://github.com/samra-
 4. 3D UNet-MTL-TSD
 5. 3D UNet++-MTL-TSD
 6. 3D Attention-UNet-MTL-TSD
+
 Implementation for boundary-constrained models is in script [here](https://github.com/samra-irshad/3d-multitask-unet/blob/main/model/boundary_constrained_models.py)
 
 ## Model Training 
