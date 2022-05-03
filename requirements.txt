@@ -1,0 +1,7 @@
+pytorch 1.4
+python 3.6
+nibabel
+numpy 
+argparse
+SimpleITK
+Medpy
