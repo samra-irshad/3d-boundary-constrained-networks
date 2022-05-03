@@ -25,3 +25,8 @@ Implementation for boundary-constrained models is in script [here](https://githu
 To train the baseline models, use the following command:
 
 `python train_baseline.py --data_folder 'path where the data is stored' --output_folder 'path to save the results' --batch 4 --epochs 300 --model unet --lr 0.001`
+
+To train the boundary-constrained models, use the following command:
+
+`python train_3d_boundary_constrained.py --data_folder 'path where the data is stored' --output_folder 'path to save the results' --batch 4 --epochs 300 \
+--model unet --conf tsol --lr 0.001 --lambda_edge 0.5`
