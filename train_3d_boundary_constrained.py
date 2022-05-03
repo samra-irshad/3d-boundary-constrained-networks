@@ -11,7 +11,7 @@ import argparse
 
 from utils import count_parameters, diceloss, CE_loss, DC_CE_loss, dice_score, getOneHotSegmentation, avg_hd, weights_init, augmentAffine, mtl_loss
 
-from models_3d_mtl import unet3d_mtl_tsol, unet3d_mtl_tsd, attenunet3d_mtl_tsol, attenunet3d_mtl_tsd, unetplus3d_mtl_tsol, unetplus3d_mtl_tsd
+from models.models_3d_mtl import unet3d_mtl_tsol, unet3d_mtl_tsd, attenunet3d_mtl_tsol, attenunet3d_mtl_tsd, unetplus3d_mtl_tsol, unetplus3d_mtl_tsd
 
 
 def main():
