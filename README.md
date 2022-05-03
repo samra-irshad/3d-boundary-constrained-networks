@@ -14,10 +14,10 @@ Implementation for baseline models is in script [here](https://github.com/samra-
 ## 3D boundary-constrained models:
 1. 3D UNet-MTL-TSOL
 2. 3D UNet++-MTL-TSOL
-3. 3D Attention-UNet-MTL-TSOL
-4. 3D UNet-MTL-TSD
-5. 3D UNet++-MTL-TSD
-6. 3D Attention-UNet-MTL-TSD
+3. 3D UNet-MTL-TSD
+4. 3D UNet++-MTL-TSD
+5. 3D Attention-UNet-MTL-TSD
+6. 3D Attention-UNet-MTL-TSOL
 
 Implementation for boundary-constrained models is in script [here](https://github.com/samra-irshad/3d-multitask-unet/blob/main/model/boundary_constrained_models.py)
 
