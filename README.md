@@ -21,6 +21,49 @@ Implementation for baseline models is in script [here](https://github.com/samra-
 
 Implementation for boundary-constrained models is in script [here](https://github.com/samra-irshad/3d-multitask-unet/blob/main/model/boundary_constrained_models.py)
 
+## Downloading the datasets:
+
+First download the datasets from links below:
+1. Pancreas-CT dataset {For images, Use [Link1](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT) , For labels: Use [Link2](https://zenodo.org/record/1169361#.YnIytuhBw2w)}
+2. BTCV dataset {For images: Use [Link1](https://www.synapse.org/#!Synapse:syn3193805) , For labels: Use [Link2](https://zenodo.org/record/1169361#.YnIytuhBw2w)}
+
+## Dataset preparation:
+1. To prepare the data, we use the pipeline utilized in [Obelisk-Net](https://www.sciencedirect.com/science/article/abs/pii/S136184151830611X) paper
+2. Use the ITK-snap to crop the scans and labels according to the bounding box coordinates given on [Link2](https://zenodo.org/record/1169361#.YnIytuhBw2w).
+
+## Dataset organization
+### Data organization for training baseline models:
+Organize the CT scans and their corresponding labels according to the format below:
+```
+Data Folder:
+     --data:
+            --images1:
+                     --pancreas_ct1.nii.gz
+                     --pancreas_ct2.nii.gz
+                     .....................
+            --labels1:
+                     --label_ct1.nii.gz
+                     --label_ct2.nii.gz
+                     .....................
+```
+### Data organization for training boundary-constrained models:
+Organize the CT scans and their corresponding labels according to the format below:
+```
+Data Folder:
+     --data:
+            --images1:
+                     --pancreas_ct1.nii.gz
+                     --pancreas_ct2.nii.gz
+                     .....................
+            --labels1:
+                     --label_ct1.nii.gz
+                     --label_ct2.nii.gz
+                     .....................
+            --contours:
+                     --label_ct1.nii.gz
+                     --label_ct2.nii.gz
+                     .....................
+```
 ## Model Training 
 To train the baseline models, use the following command:
 
