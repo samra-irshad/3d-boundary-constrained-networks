@@ -73,3 +73,8 @@ To train the boundary-constrained models, use the following command:
 
 `python train_3d_boundary_constrained.py --data_folder 'path where the data is stored' --output_folder 'path to save the results' --batch 4 --epochs 300 \
 --model unet --conf tsol --lr 0.001 --lambda_edge 0.5`
+
+The Models have been trained using two P100 GPUs, you will need to reduce the size of the batch if you use one GPU. 
+
+## Model training on custom dataset
+To train the baseline models on a different dataset, organize the data in the format described above and then use the training commands.
